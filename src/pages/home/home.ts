@@ -7,14 +7,15 @@ import { SetupPage } from '../../app/setup/setup'
   templateUrl: 'home.html'
 })
 export class HomePage {
+  setup = SetupPage;
 
   constructor(public navCtrl: NavController) {
 
   }
 
-  gotoSetup(fab: FabContainer) {
+  close(fab: FabContainer) {
     fab.close();
-    this.navCtrl.push(SetupPage, {}, { animate: true, direction: 'forward' });
+    //this.navCtrl.push(SetupPage, {}, { animate: true, direction: 'forward' });
   }
 
 }
