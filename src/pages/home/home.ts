@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { FabContainer, NavController } from 'ionic-angular';
+import { SetupPage } from '../../app/setup/setup'
 
 @Component({
   selector: 'page-home',
@@ -9,6 +10,11 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  gotoSetup(fab: FabContainer) {
+    fab.close();
+    this.navCtrl.push(SetupPage, {}, { animate: true, direction: 'forward' });
   }
 
 }
